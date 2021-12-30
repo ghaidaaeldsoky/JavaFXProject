@@ -8,35 +8,34 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: A3E4DB;;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="controller.SubjectsController">
+<AnchorPane id="AnchorPane" fx:id="subjects" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: A3E4DB;;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SubjectsController">
    <children>
       <Text fill="#000809" layoutX="89.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose the Subject Name to Start the quiz:" wrappingWidth="324.803466796875">
          <font>
             <Font name="Constantia Bold" size="28.0" />
          </font>
       </Text>
-      <Button layoutX="113.0" layoutY="156.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="173.0" styleClass="bt" stylesheets="@css/style.css" text="Cloud Computing" textFill="WHITE">
+      <Button fx:id="subject1" layoutX="113.0" layoutY="156.0" mnemonicParsing="false" onAction="#sub1Action" prefHeight="47.0" prefWidth="173.0" styleClass="bt" stylesheets="@css/style.css" text="Cloud Computing" textFill="WHITE">
          <font>
             <Font name="Century Gothic Bold" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="113.0" layoutY="226.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="173.0" styleClass="bt" stylesheets="@css/style.css" text="Java Programming" textFill="WHITE">
+      <Button fx:id="subject2" layoutX="113.0" layoutY="226.0" mnemonicParsing="false" onAction="#sub2Action" prefHeight="47.0" prefWidth="173.0" styleClass="bt" stylesheets="@css/style.css" text="Java Programming" textFill="WHITE">
          <font>
             <Font name="Century Gothic Bold" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="320.0" layoutY="156.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="173.0" styleClass="bt" stylesheets="@css/style.css" text="Operating System" textFill="WHITE">
+      <Button fx:id="subject4" layoutX="320.0" layoutY="156.0" mnemonicParsing="false" onAction="#sub4Action" prefHeight="47.0" prefWidth="173.0" styleClass="bt" stylesheets="@css/style.css" text="Operating System" textFill="WHITE">
          <font>
             <Font name="Century Gothic Bold" size="17.0" />
          </font>
       </Button>
-      <Button layoutX="113.0" layoutY="303.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="173.0" styleClass="bt" stylesheets="@css/style.css" text="Database" textFill="WHITE">
+      <Button fx:id="sybject3" layoutX="113.0" layoutY="303.0" mnemonicParsing="false" onAction="#sub3Action" prefHeight="47.0" prefWidth="173.0" styleClass="bt" stylesheets="@css/style.css" text="Database" textFill="WHITE">
          <font>
             <Font name="Century Gothic Bold" size="23.0" />
          </font>
       </Button>
-      <Button layoutX="320.0" layoutY="226.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="173.0" styleClass="bt" stylesheets="@css/style.css" text="Software Engineering1" textFill="WHITE">
+      <Button fx:id="sybject5" layoutX="320.0" layoutY="226.0" mnemonicParsing="false" onAction="#sub5Action" prefHeight="47.0" prefWidth="173.0" styleClass="bt" stylesheets="@css/style.css" text="Software Engineering1" textFill="WHITE">
          <font>
             <Font name="Century Gothic Bold" size="14.0" />
          </font>

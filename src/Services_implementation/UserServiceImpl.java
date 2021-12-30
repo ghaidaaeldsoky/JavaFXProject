@@ -20,7 +20,26 @@ public class UserServiceImpl implements UserServices {
     
     @Override
     public int login(UserModel user) {
+        if (user.getUsername().trim().isEmpty() || user.getPassword().trim().isEmpty()) {
+            return 0;
+        }
         return userDao.login(user);
+    }
+     @Override
+    public int signUp(UserModel user) {
+        if (user.getUsername().trim().isEmpty() || user.getPassword().trim().isEmpty()
+                || user.getName().trim().isEmpty() || user.getEmail().trim().isEmpty()) {
+            return 2;
+        }
+        if(user.getUsername().length() < 5){
+            return 3;
+        }
+        if(user.getPassword().length() < 7){
+            return 4;
+        }
+        
+        
+        return userDao.signup(user);
     }
     
 }

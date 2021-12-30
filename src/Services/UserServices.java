@@ -13,4 +13,5 @@ import models.UserModel;
  */
 public interface UserServices {
     public int login(UserModel user );
+    public int signUp(UserModel user);
 }

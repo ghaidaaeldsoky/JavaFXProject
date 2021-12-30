@@ -10,7 +10,7 @@ package models;
  * @author hp
  */
 public class UserModel {
-    private int id;
+    //private int id;
     private String username;
     private String password;
     private String email;
@@ -25,9 +25,6 @@ public class UserModel {
         
     }
 
-    public int getId() {
-        return id;
-    }
 
     public String getUsername() {
         return username;
@@ -45,9 +42,6 @@ public class UserModel {
         return name;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public void setUsername(String username) {
         this.username = username;

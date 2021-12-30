@@ -33,11 +33,7 @@ public class LoginController implements Initializable {
     @FXML
     private Label warning;
     
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        System.out.println("First");
-
-    }
+    
     @FXML
     private PasswordField password;
 
@@ -47,6 +43,12 @@ public class LoginController implements Initializable {
     
     @FXML
     private Button loginBtn;
+    
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        System.out.println("First");
+
+    }
     
     @FXML
     void LogInBtnAction(ActionEvent event) {
@@ -64,6 +66,8 @@ public class LoginController implements Initializable {
             } 
             else {
                 warning.setText("Invalid UserName or Password !!!!");
+                username.clear();
+                password.clear();
             }
         }
         );

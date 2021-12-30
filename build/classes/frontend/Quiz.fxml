@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TestController">
+   <children>
+      <ScrollPane prefHeight="400.0" prefWidth="600.0">
+         <content>
+            <AnchorPane prefHeight="459.0" prefWidth="516.0">
+               <children>
+                  <Label layoutX="43.0" layoutY="420.0" prefHeight="17.0" prefWidth="289.0" text="llllllllllllllllllllllllllllll" />
+                  <Label fx:id="question1" layoutX="82.0" layoutY="41.0" prefHeight="17.0" prefWidth="289.0" text="aaa" />
+                  <RadioButton fx:id="a1" layoutX="95.0" layoutY="107.0" mnemonicParsing="false" onAction="#getAnswer" text="1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="q1" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="a2" layoutX="95.0" layoutY="155.0" mnemonicParsing="false" onAction="#getAnswer" text="2" toggleGroup="$q1" />
+                  <RadioButton fx:id="a3" layoutX="95.0" layoutY="198.0" mnemonicParsing="false" onAction="#getAnswer" text="3" toggleGroup="$q1" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

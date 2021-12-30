@@ -17,4 +17,8 @@ public class userController {
     public int login(UserModel user){
         return userServiceImpl.login(user);
     }
+    
+     public int register(UserModel user){
+        return userServiceImpl.signUp(user);
+    }
 }
