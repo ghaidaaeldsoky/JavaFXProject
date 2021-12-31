@@ -40,30 +40,36 @@ public class SubjectsController implements Initializable {
 
     @FXML
     private Button sybject5;
+    
 
     @FXML
     void sub1Action(ActionEvent event) {
+        //btnVal =1;
         quizPage();
     }
 
     @FXML
     void sub2Action(ActionEvent event) {
+        //btnVal =2;
         quizPage();
     }
 
     @FXML
     void sub3Action(ActionEvent event) {
-
+        //btnVal =3;
+        quizPage();
     }
 
     @FXML
     void sub4Action(ActionEvent event) {
-
+        //btnVal =4;
+        quizPage();
     }
 
     @FXML
     void sub5Action(ActionEvent event) {
-
+        //btnVal =5;
+        quizPage();
     }
 
     @Override

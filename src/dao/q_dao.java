@@ -1,10 +1,12 @@
 
 package dao;
 
+import controller.SubjectsController;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.SQLSyntaxErrorException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -21,40 +23,31 @@ public class q_dao {
     public String ans1;
     public String ans2;
     public String ans3;
+    //public String correctans;
+    int btn;
+    
+//    q_dao(int btnVal){
+//        btn = btnVal;
+//    }
     
     
-    public void quiz (Questions question  ) {
+    
+    public ResultSet quiz1 (Questions question , int qid  ) {
         connection = DatabaseConnection.connect();
-        sql = "SELECT * FROM java  " ;
+        sql= "SELECT question , ans1, ans2 ,ans3 , correctans FROM java WHERE id =?";
         try {
-            Statement st = connection.createStatement();
-            resultSet = st.executeQuery(sql);
-            //preparedStatement = connection.prepareStatement(sql);
-            //String s ;
-           // s = question.getId().toString();
-            //preparedStatement.setString(1, Integer.toString(id));
-            
-            //resultSet = preparedStatement.executeQuery();
-            //if(resultSet.next()){
-            while (resultSet.next()) {
-                System.out.println("");
-                System.out.println(resultSet.getInt("id"));
-                System.out.println( resultSet.getString("qustion") );
-                System.out.println(resultSet.getString("ans1")) ;
-                System.out.println(ans2 = resultSet.getString("ans2") );
-                System.out.println (ans3 = resultSet.getString("ans3") );
-            //}
-            //System.out.println(q +"  " + ans1+"  "+ ans2 + "  " + ans3  );
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, qid);
+            resultSet = preparedStatement.executeQuery();
+           if (resultSet.next()) {
+               // System.out.println(resultSet.getString("question"));
+                return resultSet;
             }
-            //else
-            System.out.println("errorrrrrrrrrrrrrr"  );    
-        }
-        catch (SQLException ex) {
+            
+  
+        } catch (SQLException ex) {
             Logger.getLogger(q_dao.class.getName()).log(Level.SEVERE, null, ex);
-                }
-        
-        
-       // return 0;
-    } 
-    
+        } 
+    return null;
+}
 }

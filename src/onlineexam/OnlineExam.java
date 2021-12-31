@@ -5,6 +5,8 @@ import dao.DatabaseConnection;
 import dao.q_dao;
 import dao.user_dao;
 import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javacontroller.userController;
@@ -36,7 +38,7 @@ public class OnlineExam extends Application {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         //DatabaseConnection.connect();
 //        UserModel user =new UserModel();
 //        user.setUsername("Aya_m");
@@ -49,10 +51,12 @@ public class OnlineExam extends Application {
 //         //userController u= new userController();
 //         user_dao dao = new user_dao();
 //         System.out.println(dao.signup(user));
-       // launch(args);
-        q_dao test = new q_dao();
-        Questions question = new Questions();
-        test.quiz(question);
+       launch(args);
+//       Questions q =new Questions();
+//        q_dao test = new q_dao();
+//        ResultSet s = test.quiz1(q,1);
+//        //s.getString("question");
+//        System.out.println(s.getString("question"));
         //System.out.println("java version: "+System.getProperty("java.version"));
         //System.out.println("javafx.version: " + System.getProperty("javafx.version"));
     }

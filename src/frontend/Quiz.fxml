@@ -3,29 +3,45 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TestController">
    <children>
-      <ScrollPane prefHeight="400.0" prefWidth="600.0">
-         <content>
-            <AnchorPane prefHeight="459.0" prefWidth="516.0">
-               <children>
-                  <Label layoutX="43.0" layoutY="420.0" prefHeight="17.0" prefWidth="289.0" text="llllllllllllllllllllllllllllll" />
-                  <Label fx:id="question1" layoutX="82.0" layoutY="41.0" prefHeight="17.0" prefWidth="289.0" text="aaa" />
-                  <RadioButton fx:id="a1" layoutX="95.0" layoutY="107.0" mnemonicParsing="false" onAction="#getAnswer" prefHeight="17.0" prefWidth="208.0" text="1">
-                     <toggleGroup>
-                        <ToggleGroup fx:id="q1" />
-                     </toggleGroup>
-                  </RadioButton>
-                  <RadioButton fx:id="a2" layoutX="95.0" layoutY="155.0" mnemonicParsing="false" onAction="#getAnswer" text="2" toggleGroup="$q1" />
-                  <RadioButton fx:id="a3" layoutX="95.0" layoutY="198.0" mnemonicParsing="false" onAction="#getAnswer" text="3" toggleGroup="$q1" />
-                  <Button layoutX="211.0" layoutY="116.0" mnemonicParsing="false" onAction="#actionbtn" prefHeight="58.0" prefWidth="159.0" text="Button" />
-               </children>
-            </AnchorPane>
-         </content>
-      </ScrollPane>
+      <AnchorPane fx:id="question" prefHeight="403.0" prefWidth="720.0" style="-fx-background-color: A3E4DB;;">
+         <children>
+            <Label fx:id="question1" layoutX="36.0" layoutY="14.0" prefHeight="127.0" prefWidth="656.0" text="aaa">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="a1" layoutX="58.0" layoutY="160.0" mnemonicParsing="false" onAction="#getAnswer" prefHeight="42.0" prefWidth="633.0" text="1">
+               <toggleGroup>
+                  <ToggleGroup fx:id="q1" />
+               </toggleGroup>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="a2" layoutX="58.0" layoutY="222.0" mnemonicParsing="false" onAction="#getAnswer" prefHeight="40.0" prefWidth="633.0" text="2" toggleGroup="$q1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="a3" layoutX="60.0" layoutY="280.0" mnemonicParsing="false" onAction="#getAnswer" prefHeight="42.0" prefWidth="633.0" text="3" toggleGroup="$q1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </RadioButton>
+            <Button layoutX="570.0" layoutY="338.0" mnemonicParsing="false" onAction="#NextBtn" prefHeight="36.0" prefWidth="118.0" styleClass="bt" stylesheets="@css/style.css" text="Next" textFill="WHITE">
+               <font>
+                  <Font name="Bookshelf Symbol 7" size="20.0" />
+               </font>
+            </Button>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="2.0" layoutX="36.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="650.0" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
