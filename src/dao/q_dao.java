@@ -34,6 +34,25 @@ public class q_dao {
     
     public ResultSet quiz1 (Questions question , int qid  ) {
         connection = DatabaseConnection.connect();
+        sql= "SELECT question , ans1, ans2 ,ans3 , correctans FROM cloud WHERE id =?";
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, qid);
+            resultSet = preparedStatement.executeQuery();
+           if (resultSet.next()) {
+               // System.out.println(resultSet.getString("question"));
+                return resultSet;
+            }
+            
+  
+        } catch (SQLException ex) {
+            Logger.getLogger(q_dao.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+    return null;
+}
+    
+    public ResultSet quiz2 (Questions question , int qid  ) {
+        connection = DatabaseConnection.connect();
         sql= "SELECT question , ans1, ans2 ,ans3 , correctans FROM java WHERE id =?";
         try {
             preparedStatement = connection.prepareStatement(sql);
@@ -50,4 +69,61 @@ public class q_dao {
         } 
     return null;
 }
+    
+    public ResultSet quiz3 (Questions question , int qid  ) {
+        connection = DatabaseConnection.connect();
+        sql= "SELECT question , ans1, ans2 ,ans3 , correctans FROM database1 WHERE id =?";
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, qid);
+            resultSet = preparedStatement.executeQuery();
+           if (resultSet.next()) {
+               // System.out.println(resultSet.getString("question"));
+                return resultSet;
+            }
+            
+  
+        } catch (SQLException ex) {
+            Logger.getLogger(q_dao.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+    return null;
+}
+    
+    public ResultSet quiz4 (Questions question , int qid  ) {
+        connection = DatabaseConnection.connect();
+        sql= "SELECT question , ans1, ans2 ,ans3 , correctans FROM operating_system WHERE id =?";
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, qid);
+            resultSet = preparedStatement.executeQuery();
+           if (resultSet.next()) {
+               // System.out.println(resultSet.getString("question"));
+                return resultSet;
+            }
+            
+  
+        } catch (SQLException ex) {
+            Logger.getLogger(q_dao.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+    return null;
+}
+    public ResultSet quiz5 (Questions question , int qid  ) {
+        connection = DatabaseConnection.connect();
+        sql= "SELECT question , ans1, ans2 ,ans3 , correctans FROM software WHERE id =?";
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setInt(1, qid);
+            resultSet = preparedStatement.executeQuery();
+           if (resultSet.next()) {
+               // System.out.println(resultSet.getString("question"));
+                return resultSet;
+            }
+            
+  
+        } catch (SQLException ex) {
+            Logger.getLogger(q_dao.class.getName()).log(Level.SEVERE, null, ex);
+        } 
+    return null;
+}
+    
 }

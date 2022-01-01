@@ -7,6 +7,7 @@ import dao.user_dao;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javacontroller.userController;
@@ -59,6 +60,13 @@ public class OnlineExam extends Application {
 //        System.out.println(s.getString("question"));
         //System.out.println("java version: "+System.getProperty("java.version"));
         //System.out.println("javafx.version: " + System.getProperty("javafx.version"));
+        
+        
+        //Random random = new Random();
+//        for (int i=0;i<10 ;i++) {
+//         int qNum =  (int)(Math.random() * (8-1) +1); 
+//        System.out.println(qNum);
+//        }
     }
     
 }

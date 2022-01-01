@@ -41,34 +41,35 @@ public class SubjectsController implements Initializable {
     @FXML
     private Button sybject5;
     
+    private static int btnVal;
 
     @FXML
     void sub1Action(ActionEvent event) {
-        //btnVal =1;
+        btnVal =1;
         quizPage();
     }
 
     @FXML
     void sub2Action(ActionEvent event) {
-        //btnVal =2;
+        btnVal =2;
         quizPage();
     }
 
     @FXML
     void sub3Action(ActionEvent event) {
-        //btnVal =3;
+        btnVal =3;
         quizPage();
     }
 
     @FXML
     void sub4Action(ActionEvent event) {
-        //btnVal =4;
+        btnVal =4;
         quizPage();
     }
 
     @FXML
     void sub5Action(ActionEvent event) {
-        //btnVal =5;
+        btnVal =5;
         quizPage();
     }
 
@@ -90,6 +91,9 @@ public class SubjectsController implements Initializable {
         } catch (IOException ex) {
             Logger.getLogger(SubjectsController.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    public int btnVal () {
+        return btnVal;
     }
     
     

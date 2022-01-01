@@ -27,8 +27,10 @@ public class ResultController implements Initializable {
     @FXML
     private AnchorPane resultpage;
 
+    TestController c=new TestController();
     @FXML
     void mainPageBtn(ActionEvent event) {
+        c.resetValues();
         mainPage();
     }
 

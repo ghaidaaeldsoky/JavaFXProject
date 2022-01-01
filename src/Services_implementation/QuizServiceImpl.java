@@ -26,23 +26,27 @@ public class QuizServiceImpl implements QuizServices {
 
     @Override
     public ResultSet Quiz(Questions quiz , int qid ) {
+        SubjectsController btn = new SubjectsController();
+        int btnVal = btn.btnVal();
         
-        return q.quiz1(quiz, qid);
-        
-       
-//        if (btnVal==1) {
-//            return q.quiz1(quiz,1);
-//         }else if (btnVal==2) {
-//            return q.quiz1(quiz,1);
-//         }else if (btnVal==3) {
-//            return q.quiz1(quiz,1);
-//         }else if (btnVal==4) {
-//             return q.quiz1(quiz,1);
-//         }else {
-//             return q.quiz1(quiz,1);
-//         }
+        if (btnVal ==1) {
+            return q.quiz1(quiz, qid);
+        }
+        else if (btnVal ==2){
+            return q.quiz2(quiz, qid);
+        }
+        else if (btnVal ==3){
+            return q.quiz3(quiz, qid);
+        }
+        else if (btnVal ==4){
+            return q.quiz4(quiz, qid);
+        }
+        else if (btnVal ==5){
+            return q.quiz5(quiz, qid);
+        }
+
     
-    
+        return null;
      
     }
     

@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Random;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -52,8 +53,10 @@ public class TestController implements Initializable {
     
     private static int clickNum =0;
     public static int result=0;
-    private static int qNum =1;
-    public String correctAns;
+     //Random random = new Random();
+     private static int qNum =  (int)(Math.random() * (8-1) +1); 
+     private static int qNum2 = qNum;
+     public String correctAns;
 
     @FXML
     void NextBtn(ActionEvent event) throws SQLException {
@@ -77,9 +80,14 @@ public class TestController implements Initializable {
             }
             else if (a2.isSelected()) a2.setSelected(false);
             else if (a3.isSelected()) a3.setSelected(false);
+           ++qNum2;
+           if(qNum2>7)
+               qNum2=1;
            
-           
-            qustion1(++qNum);}
+            qustion1(qNum2);
+            System.out.println(qNum2);
+            }
+            
             
            //testres.setText("result = "+result);
         }
@@ -91,7 +99,8 @@ public class TestController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb)  {
         try {
-            qustion1(1);
+            qustion1(qNum2);
+            System.out.println(qNum2);
         } catch (SQLException ex) {
             Logger.getLogger(TestController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -151,6 +160,11 @@ public class TestController implements Initializable {
         } catch (IOException ex) {
             Logger.getLogger(SubjectsController.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    
+    public void resetValues() {
+        clickNum =0;
+        result=0;
     }
     
 }
